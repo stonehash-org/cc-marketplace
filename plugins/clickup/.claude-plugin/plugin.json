@@ -1,0 +1,10 @@
+{
+  "name": "clickup",
+  "version": "1.0.0",
+  "description": "Natural language interaction with ClickUp for task management, sprint tracking, and workspace operations via MCP",
+  "author": {
+    "name": "jaybee-sths",
+    "url": "https://github.com/jaybee-sths"
+  },
+  "keywords": ["clickup", "project-management", "tasks", "sprint", "productivity"]
+}

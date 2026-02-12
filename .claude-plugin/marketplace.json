@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cc-mkp",
+  "description": "Custom Claude Code plugins marketplace - project management integrations and productivity tools",
+  "owner": {
+    "name": "jaybee-sths",
+    "url": "https://github.com/jaybee-sths"
+  },
+  "plugins": [
+    {
+      "name": "clickup",
+      "source": "./plugins/clickup",
+      "description": "Natural language interaction with ClickUp for task management, sprint tracking, and workspace operations via MCP",
+      "version": "1.0.0",
+      "category": "project-management",
+      "keywords": ["clickup", "project-management", "tasks", "sprint", "productivity", "mcp"]
+    }
+  ]
+}
