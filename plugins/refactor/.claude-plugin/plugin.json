@@ -1,0 +1,6 @@
+{
+  "name": "refactor",
+  "version": "1.0.0",
+  "description": "IDE-like refactoring via tree-sitter: symbol rename, file rename with reference updates, and reference tracking",
+  "keywords": ["refactor", "rename", "references", "tree-sitter", "ide"]
+}
