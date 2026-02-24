@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Shared library for refactor plugin scripts
+# Shared library for ast-refactor plugin scripts
 # Usage: source "$(dirname "$0")/shared-lib.sh"
 
 # Resolve plugin paths

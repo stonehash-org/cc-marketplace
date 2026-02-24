@@ -122,7 +122,7 @@ QUERY
   echo "  3. Test with: find-references.sh --symbol <name> --path <dir>"
 fi
 
-LANGS_FILE="$PLUGIN_DIR/skills/refactor/references/supported-languages.md"
+LANGS_FILE="$PLUGIN_DIR/skills/ast-refactor/references/supported-languages.md"
 if [ -f "$LANGS_FILE" ]; then
   if ! grep -q "| $LANG " "$LANGS_FILE"; then
     echo "| $LANG | \`*.${LANG}\` | \`queries/${LANG}/symbols.scm\` | template |" >> "$LANGS_FILE"

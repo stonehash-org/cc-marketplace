@@ -1,4 +1,4 @@
-# Refactor Plugin for Claude Code
+# AST Refactor Plugin for Claude Code
 
 Claude Code 에이전트가 코드 리팩토링/분석 작업 시 일관성 있고 빠르게 수행할 수 있도록 만든 tree-sitter AST 기반 도구 모음입니다.
 
@@ -116,14 +116,28 @@ Claude Code 에이전트가 코드 리팩토링/분석 작업 시 일관성 있�
 ## 구조
 
 ```
-refactor/
+ast-refactor/
 ├── .claude-plugin/plugin.json       # 플러그인 매니페스트
-├── skills/refactor/SKILL.md         # 에이전트 트리거 스킬
-├── scripts/              (24개)     # 실행 스크립트
-│   └── shared-lib.sh               # 공통 함수 (detect_language, run_query 등)
+├── skills/ast-refactor/SKILL.md     # 에이전트 트리거 스킬
+├── scripts/              (26개)     # 실행 스크립트
+│   ├── shared-lib.sh               # 공통 함수 (detect_language, run_query 등)
+│   ├── submit-feedback.sh          # 에이전트 피드백 제출
+│   └── feedback-summary.sh         # 피드백 요약 조회
+├── agent-feedbacks/                 # 에이전트 피드백 데이터 (JSONL)
 └── queries/              (4 언어)   # tree-sitter 쿼리
     ├── typescript/       (6 files)  # symbols, assignment-value, block-range,
     ├── python/           (6 files)  #   call-arguments, control-flow,
     ├── java/             (6 files)  #   inheritance
     └── kotlin/           (6 files)
+```
+
+## 에이전트 피드백
+
+에이전트가 스크립트 사용 후 자동으로 `agent-feedbacks/` 에 결과를 기록합니다.
+이 데이터를 통해 어떤 스크립트가 자주 실패하는지, 어떤 옵션이 혼란을 주는지 파악하고 개선합니다.
+
+```bash
+# 피드백 요약 조회
+bash scripts/feedback-summary.sh
+bash scripts/feedback-summary.sh --days 7 --format json
 ```

@@ -1,0 +1,6 @@
+{
+  "name": "ast-refactor",
+  "version": "1.0.0",
+  "description": "tree-sitter AST-based refactoring and analysis toolkit: symbol rename, file rename, reference tracking, code analysis",
+  "keywords": ["ast-refactor", "refactor", "rename", "references", "tree-sitter", "ast"]
+}
